@@ -1,10 +1,12 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
+import { FaGithub ,FaGoogle} from "react-icons/fa"; 
+
 
 
 const Login = () => {
-    const {  createLogin} = useContext(AuthContext)
+    const {  createLogin, createGoogle,createGithub} = useContext(AuthContext)
 
 
     const handleLogin = e =>{
@@ -24,10 +26,22 @@ const Login = () => {
 
     }
 
+    const handleGoogle =()=>{
+        createGoogle()
+        .then(result => console.log(result.user))
+        .catch(error => console.log(error))
+    }
+
+    const handleGithub =()=>{
+        createGithub()
+        .then(result => console.log(result.user))
+        .catch(error => console.log(error))
+    }
+
     return (
         <div className="mt-10">
             <h1 className="text-3xl text-center font-bold text-teal-500"> Login Now</h1>
-            <div className="bg-slate-900 h-[400px] rounded-xl w-3/5 pl-64 py-10 mt-10 mx-auto">
+            <div className="bg-slate-900 h-[450px] rounded-xl w-3/5 pl-64 py-10 mt-10 mx-auto">
                 <form onSubmit={handleLogin}>
                     <div>
                         <label className="label">
@@ -44,8 +58,18 @@ const Login = () => {
                             <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                         </label>
                     </div>
-                    <input className="btn btn-primary w-3/5 mt-6" type="submit" value="Register" />
+                    <input className="btn btn-primary w-3/5" type="submit" value="Register" />
                 </form>
+                <div className="flex gap-10">
+                    <div className="ml-28 mt-4">
+                    <button onClick={handleGoogle} className="  rounded-full" ><FaGoogle className="text-3xl ml-3 bg-black rounded-full " /></button>
+                    <p className="font-semibold text-teal-400">Google</p>
+                    </div>
+                    <div className="mt-4">
+                    <button onClick={handleGithub} className="  rounded-full"><FaGithub className="text-3xl ml-3 bg-black rounded-full "  /></button>
+                    <p className="font-semibold text-teal-400">Github</p>
+                    </div>
+                </div>
                 <p className="mt-4">New Hare? Please <Link to='/Register' className="text-teal-400 font-bold">Register</Link></p>
             </div>
         </div>

@@ -1,6 +1,15 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const Navbar = () => {
+    const {user,logOut} = useContext(AuthContext)
+    
+    const handleLogOUt =() =>{
+        logOut()
+    }
+ 
+
     return (
         <div>
             <div className="navbar bg-base-100">
@@ -29,9 +38,11 @@ const Navbar = () => {
                 </div>
                 <div className="lg:ml-4 flex" >
                 
-                     <button className="btn">LogOut</button> : <NavLink to='/login'><button className="btn">Log In</button></NavLink>
+                    {
+                      user?<button onClick={handleLogOUt}  className="btn text-teal-400 w-28">LogOut</button> : <NavLink to='/login'><button className="text-teal-400 btn w-28">Log In</button></NavLink>
+                     }
                 
-                <Link to='/register'><a className="btn ml-2">Sign Up</a></Link>
+                <Link to='/register'><a className="btn mx-4 w-28 text-teal-400">Sign Up</a></Link>
             </div>
                 <div className="dropdown dropdown-end">
                     <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar lg:tooltip"   data-tip="Md Saidul Islam">
