@@ -6,7 +6,7 @@ const Register = () => {
     return (
         <div className="mt-10">
             <h1 className="text-3xl text-center font-bold text-teal-500">Please Register Now</h1>
-            <div className="bg-slate-800  rounded-xl w-3/5 pl-64 py-10 mt-10 mx-auto">
+            <div className="bg-slate-900  rounded-xl w-3/5 pl-64 py-10 mt-10 mx-auto">
                 <form >
                     <div >
                         <label className="label">
