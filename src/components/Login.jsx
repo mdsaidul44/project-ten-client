@@ -61,7 +61,7 @@ const Login = () => {
                     <input className="btn btn-primary w-3/5" type="submit" value="Register" />
                 </form>
                 <div className="flex gap-10">
-                    <div className="ml-28 mt-4">
+                    <div className="ml-24 mt-4">
                     <button onClick={handleGoogle} className="  rounded-full" ><FaGoogle className="text-3xl ml-3 bg-black rounded-full " /></button>
                     <p className="font-semibold text-teal-400">Google</p>
                     </div>

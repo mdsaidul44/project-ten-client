@@ -5,12 +5,14 @@ import {
 import Home from "../components/Home/Home"; 
 import Register from "../components/Register";
 import Login from "../components/Login";
+import ErrorPage from './../components/ErrorPage';
 
 
   const router = createBrowserRouter([
     {
       path: "/",
       element: <Root/>,
+      errorElement: <ErrorPage/>,
       children:[
        {
         path:'/',
