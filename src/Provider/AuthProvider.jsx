@@ -10,26 +10,31 @@ const AuthProvider = ({children}) => {
     const googleProvider = new GoogleAuthProvider()
     const githubProvider = new GithubAuthProvider()
     const [user,setUser] =useState(null)
-    const [loader,setLoader] = useState()
+    const [loader,setLoader] = useState(true)
 
 
     const createGithub = ()=> {
+        setLoader(true)
         return signInWithPopup(auth,githubProvider)
     }
 
     const createGoogle = () =>{
+        setLoader(true)
         return signInWithPopup(auth,googleProvider)
     }
 
     const createRegister = (email,password) =>{
+        setLoader(true)
         return createUserWithEmailAndPassword(auth,email,password)
     }
 
     const createLogin = (email,password) =>{
+        setLoader(true)
         return signInWithEmailAndPassword(auth,email,password)
     }
 
     const logOut = ()=>{
+        setLoader(true)
         return signOut(auth)
     }
     
@@ -39,6 +44,7 @@ const AuthProvider = ({children}) => {
         const UnSubscribe = onAuthStateChanged(auth,currentUser=>{
             console.log('user set ' ,currentUser)
             setUser(currentUser)
+            setLoader(false)
         })
         return() =>{
             UnSubscribe()
