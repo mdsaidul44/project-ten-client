@@ -6,6 +6,7 @@ import Home from "../components/Home/Home";
 import Register from "../components/Register";
 import Login from "../components/Login";
 import ErrorPage from './../components/ErrorPage';
+import AddCraftItem from "../components/ArtAndCraft/AddCraftItem";
 
 
   const router = createBrowserRouter([
@@ -25,6 +26,10 @@ import ErrorPage from './../components/ErrorPage';
        {
         path: '/login',
         element: <Login/>
+       },
+       {
+        path: '/addcraft',
+        element: <AddCraftItem/>
        }
       ]
     },
