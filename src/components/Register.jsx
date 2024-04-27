@@ -1,27 +1,51 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
+import { toast } from "react-toastify";
 
 
 
 const Register = () => {
-    const {createRegister} = useContext(AuthContext)
-    const handleRegister = e =>{
+    const { createRegister } = useContext(AuthContext)
+    const [success, setSuccess] = useState('')
+    const [loadingError, setLoginError] = useState('')
+    const handleRegister = e => {
         e.preventDefault()
         const form = e.target;
         const name = form.name.value
         const photo = form.photo.value
         const email = form.email.value
         const password = form.password.value
-        console.log(name,photo,email,password)
+        console.log(name, photo, email, password)
 
-        createRegister(email,password)
-        .then(result => {
-            console.log(result.user)
-        })
-        .catch(error =>{
-            console.log(error)
-        })
+        createRegister(email, password)
+            .then(result => {
+                console.log(result.user)
+                if (result.user) {
+                    setSuccess('user login in successfully')
+                    toast.success('succousfully')
+                }else{
+                    toast.error('Something in Wrong')
+                }
+                e.target.reset()
+            })
+            .catch(error => {
+                console.log(error)
+                toast.setLoginError('Your information wrong')
+
+            })
+
+
+        if (password.length < 6) {
+            setLoginError('please your password must be 6 character or longer')
+            return;
+        } else if (!/[a-z]/.test(password)) {
+            setLoginError('please must be provide a lower case')
+            return
+        } else if (!/[A-Z]/.test(password)) {
+            setLoginError('please must be provide a Upper case')
+            return
+        }
 
     }
     return (
@@ -52,6 +76,14 @@ const Register = () => {
                             <span className="label-text">Password</span>
                         </label>
                         <input className="input input-bordered w-3/5  " type="password" name="password" placeholder="Password" id="" />
+                    </div>
+                    <div>
+                        {
+                            <p>{loadingError}</p>
+                        }
+                        {
+                            <p>{success}</p>
+                        }
                     </div>
                     <input className="btn btn-primary w-3/5 mt-6" type="submit" value="Register" />
                 </form>
