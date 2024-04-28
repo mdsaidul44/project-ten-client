@@ -7,7 +7,7 @@ import Footer from "../components/Page/Footer";
 const Root = () => {
     return (
        <div>
-         <div className=" mt-10 mx-20">  
+         <div className=" mt-10 lg:mx-20">  
             <Navbar/>
             <Outlet/>
             
