@@ -6,7 +6,7 @@ import Home from "../components/Home/Home";
 import Register from "../components/Register";
 import Login from "../components/Login";
 import ErrorPage from './../components/ErrorPage';
-import AddCraftItem from "../components/ArtAndCraft/AddCraftItem";
+import AddCraftItem from "../components/ArtAndCraft/AddCraftItem"; 
 
 
   const router = createBrowserRouter([
@@ -17,7 +17,8 @@ import AddCraftItem from "../components/ArtAndCraft/AddCraftItem";
       children:[
        {
         path:'/',
-        element: <Home/>
+        element: <Home/>,
+        loader: () => fetch('http://localhost:5000/art')
        },
        {
         path: '/register',
@@ -30,7 +31,7 @@ import AddCraftItem from "../components/ArtAndCraft/AddCraftItem";
        {
         path: '/addcraft',
         element: <AddCraftItem/>
-       }
+       }, 
       ]
     },
   ]);
