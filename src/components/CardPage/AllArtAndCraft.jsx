@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react"; 
+import { Link } from "react-router-dom";
 
 
 
 const AllArtAndCraft = () => {
     const [allCraft, setAllCraft] = useState([])
 
-    const { subcategory_name, item_name, user_email, short_description, price, rating, customization, processing_time, stockStatus, user_name, image, } = allCraft
+    const {_id, subcategory_name, item_name, user_email, short_description, price, rating, customization, processing_time, stockStatus, user_name, image, } = allCraft
 
     useEffect(() => {
         fetch('http://localhost:5000/art')
@@ -19,7 +20,7 @@ const AllArtAndCraft = () => {
     return (
         <div className="my-20"> 
             <div className="overflow-x-auto">
-                <table className="table table-xs">
+                <table className="table">
                     <thead>
                         <tr className="underline ">
                             <th></th>
@@ -32,13 +33,13 @@ const AllArtAndCraft = () => {
                     </thead>
                     <tbody className="">
                         {
-                            allCraft.map(all => <tr key={all._id} className="">
-                                <th></th>
+                            allCraft.map((all,index )=> <tr key={all._id} className="">
+                                <th>{index+1}</th>
                                 <td>{all.subcategory_name}</td>
                                 <td>{all.customization}</td>
                                 <td>{all.stockStatus}</td>
                                 <td>${all.price}</td> 
-                                <button className="btn mt-2 ">Details</button>
+                               <Link to={`/artdetails/:${all._id}`}> <button className="btn mt-2 ">Details</button></Link>
                             </tr>)
                         }
                     </tbody>

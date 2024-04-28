@@ -36,9 +36,10 @@ const Navbar = () => {
                         </div>
                         <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box lg:w-52">
                             <Link to='/'><a>Home</a></Link>
-                            <Link to='/allart'><a>All Art & craft Items</a></Link>
-                            <Link to='/addcraft'><a>Add Craft Item</a></Link>
-                            <Link to='/myart'><a>My Art&Craft List</a></Link>
+                            <Link to='/allart'><a>All Art & craft</a></Link>
+                            <Link to='/addcraft'><a>Add Craft</a></Link>
+                            <Link to='/myart'><a>My Art</a></Link>
+                            <Link to='/craft'><a>All Craft</a></Link>
                         </ul>
                     </div>
                     <img className="rounded-full w-8 lg:w-14" src="https://i.ibb.co/411RJyz/images.pngn " alt="" />
@@ -47,9 +48,10 @@ const Navbar = () => {
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 font-bold text-slate-400 " >
                         <Link to='/'><li><a>Home</a></li></Link>
-                        <Link to='/allart'><li><a>All Art & craft Items</a></li></Link>
-                        <Link to='/addcraft'><li><a>Add Craft Item</a></li></Link>
-                        <Link to='/myart'><li><a>My Art&Craft List</a></li></Link>
+                        <Link to='/allart'><li><a>All Art & craft</a></li></Link>
+                        <Link to='/addcraft'><li><a>Add Craft</a></li></Link>
+                        <Link to='/myart'><li><a>My Art</a></li></Link>
+                        <Link to='/craft'><li><a>All Craft</a></li></Link>
                     </ul>
                 </div>
                 <div className="lg:ml-4 flex" >
