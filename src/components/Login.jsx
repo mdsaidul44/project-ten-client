@@ -58,7 +58,7 @@ const Login = () => {
                             <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                         </label>
                     </div>
-                    <input className="btn btn-primary w-3/5" type="submit" value="Register" />
+                    <input className="btn btn-primary w-3/5" type="submit" value="login" />
                 </form>
                 <div className="flex gap-10">
                     <div className="ml-24 mt-4">

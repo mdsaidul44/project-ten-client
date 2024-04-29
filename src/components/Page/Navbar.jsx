@@ -64,8 +64,8 @@ const Navbar = () => {
                 </div>
                 <div className="dropdown dropdown-end">
                     <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar lg:tooltip" data-tip="Md Saidul Islam">
-                        <div className="w-10 rounded-full ">
-                            <img alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                    <div className="w-10 rounded-full">
+                            <img alt="Tailwind CSS Navbar component" src={user ? `${user?.photoURL}`:"https://i.ibb.co/09CxQmr/unnamed.png"} />
                         </div>
                     </div>
                 </div>
