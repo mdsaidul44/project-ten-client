@@ -13,6 +13,7 @@ import AllCraftDetails from "../components/CardPage/AllCraftDetails";
 import ArtSection from "../components/CardPage/ArtSection";
 import ArtDetails from "../components/CardPage/ArtDetails";
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
+import MyArt from "../components/CardPage/MyArt/MyArt";
 
 
 const router = createBrowserRouter([
@@ -61,6 +62,11 @@ const router = createBrowserRouter([
         path: '/craftdetails/:id',
         element: <ArtDetails/>,
         loader: () => fetch(`http://localhost:5000/craft`)
+      },
+      {
+        path: '/myart',
+        element: <MyArt></MyArt>,
+        loader: ()=> fetch('http://localhost:5000/art')
       }
     ]
   },
