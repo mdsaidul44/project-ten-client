@@ -13,7 +13,7 @@ const ArtSection = () => {
                   <h2 className="card-title text-2xl font-bold text-teal-400">{item.subcategory_name}</h2>
                   <p className="text-slate-300">{item.short_description.slice(0,80)}</p>
                   <div className="card-actions justify-end">
-                    <Link to={`/craftdetails/:${item._id}`}><button className="btn btn-primary">Details</button></Link>
+                    <Link to={`/craftdetails/${item._id}`}><button className="btn btn-primary">Details</button></Link>
                   </div>
                 </div>
               </div>)

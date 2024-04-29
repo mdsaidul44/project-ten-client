@@ -5,9 +5,7 @@ import { Link } from "react-router-dom";
 
 const AllArtAndCraft = () => {
     const [allCraft, setAllCraft] = useState([])
-
-    const {_id, subcategory_name, item_name, user_email, short_description, price, rating, customization, processing_time, stockStatus, user_name, image, } = allCraft
-
+  
     useEffect(() => {
         fetch('http://localhost:5000/art')
             .then(res => res.json())
@@ -39,7 +37,7 @@ const AllArtAndCraft = () => {
                                 <td>{all.customization}</td>
                                 <td>{all.stockStatus}</td>
                                 <td>${all.price}</td> 
-                               <Link to={`/artdetails/:${all._id}`}> <button className="btn mt-2 ">Details</button></Link>
+                               <Link to={`/artdetails/${all._id}`}> <button className="btn mt-2 ">Details</button></Link>
                             </tr>)
                         }
                     </tbody>

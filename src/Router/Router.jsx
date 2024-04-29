@@ -11,6 +11,7 @@ import ViewDetails from "../components/CardPage/ViewDetails";
 import AllArtAndCraft from "../components/CardPage/AllArtAndCraft";
 import AllCraftDetails from "../components/CardPage/AllCraftDetails";
 import ArtSection from "../components/CardPage/ArtSection";
+import ArtDetails from "../components/CardPage/ArtDetails";
 
 
 const router = createBrowserRouter([
@@ -54,6 +55,11 @@ const router = createBrowserRouter([
         path:'/craft',
         element: <ArtSection/>,
         loader: () =>fetch('http://localhost:5000/craft')
+      },
+      {
+        path: '/craftdetails/:id',
+        element: <ArtDetails/>,
+        loader: () => fetch(`http://localhost:5000/craft`)
       }
     ]
   },
