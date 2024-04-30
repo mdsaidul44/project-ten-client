@@ -8,7 +8,7 @@ const Printing = () => {
                 <p className="mt-4">An arts and crafts business involves creating and selling handmade items with an artistic or decorative purpose. <br /> These products reflect the artisans and the products individuality.</p>
                 <p></p>
             </div>
-            <div className="flex gap-24 mt-20">
+            <div className=" lg:flex lg:gap-24 mt-20">
                 <div className="card w-96 bg-neutral text-neutral-content">
                     <div className="card-body items-center text-center">
                         <h2 className="card-title text-2xl font-bold text-green-600"> Painting and Drawing</h2>
@@ -28,8 +28,8 @@ const Printing = () => {
                     </div>
                 </div>
             </div>
-            <div className="flex gap-24 mt-20">
-                <div className="card w-96 bg-neutral text-neutral-content">
+            <div className=" lg:flex lg:gap-24 mt-20">
+                <div className="card w-96 bg-neutral text-neutral-content ">
                     <div className="card-body items-center text-center">
                         <h2 className="card-title text-2xl font-bold text-green-600">Paper Crafts & Glass Art</h2>
                         <p>Paper craft is a collection of crafts using paper or card as the primary artistic medium for the creation of two or three-dimensional objects.</p>
