@@ -63,7 +63,7 @@ return (
                         <h1>Rating : {data.rating}</h1>
                     </div>
                     <div className="card-actions justify-end">
-                        <Link to={`/art/${data._id}`}><button className="btn mr-10 btn-secondary">Update</button></Link>
+                        <Link to={`/update/${data._id}`}><button className="btn mr-10 btn-secondary">Update</button></Link>
                         <Link><button onClick={() => handleDelete(data._id)} className="btn btn-secondary">Delete</button></Link>
                     </div>
                 </div>

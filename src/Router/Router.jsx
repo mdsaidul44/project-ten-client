@@ -14,6 +14,7 @@ import ArtSection from "../components/CardPage/ArtSection";
 import ArtDetails from "../components/CardPage/ArtDetails";
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
 import MyArt from "../components/CardPage/MyArt/MyArt";
+import UpdateArt from "../components/CardPage/MyArt/UpdateArt";
 
 
 const router = createBrowserRouter([
@@ -65,8 +66,13 @@ const router = createBrowserRouter([
       },
       {
         path: '/myart',
-        element: <MyArt></MyArt>,
+        element: <PrivateRoute><MyArt></MyArt></PrivateRoute>,
         loader: ()=> fetch('http://localhost:5000/art')
+      },
+      {
+        path: '/update/:id',
+        element: <UpdateArt/> ,
+        loader: ()=>fetch(`http://localhost:5000/art`)
       }
     ]
   },
