@@ -63,14 +63,14 @@ const Login = () => {
                 <div className="flex gap-10">
                     <div className="ml-24 mt-4">
                     <button onClick={handleGoogle} className="  rounded-full" ><FaGoogle className="text-3xl ml-3 bg-black rounded-full " /></button>
-                    <p className="font-semibold text-teal-400">Google</p>
+                    <p className="font-semibold text-gray-600-400">Google</p>
                     </div>
                     <div className="mt-4">
                     <button onClick={handleGithub} className="  rounded-full"><FaGithub className="text-3xl ml-3 bg-black rounded-full "  /></button>
-                    <p className="font-semibold text-teal-400">Github</p>
+                    <p className="font-semibold text-gray-400">Github</p>
                     </div>
                 </div>
-                <p className="mt-4">New Hare? Please <Link to='/Register' className="text-teal-400 font-bold">Register</Link></p>
+                <p className="mt-4">New Hare? Please <Link to='/Register' className="text-gray-600 font-bold underline">Register</Link></p>
             </div>
         </div>
     );

@@ -4,6 +4,7 @@ import Banner from "../Page/Banner/Banner";
 import { useLoaderData } from "react-router-dom";
 import CardCategory from "../CardPage/CardCategory";
 import Category from "../CardPage/Category"; 
+import Printing from "./Printing";
 
 
 
@@ -29,6 +30,9 @@ const Home = () => {
                         ></CardCategory>)
                 }
             </div> 
+            <div className="my-20">
+                <Printing/>
+            </div>
         </div>
     );
 };
