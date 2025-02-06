@@ -22,7 +22,7 @@ const AddCraftItem = () => {
 
 
         // send data to the server
-        fetch('http://localhost:5000/art', {
+        fetch('https://my-assignment-ten.onrender.com/art', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

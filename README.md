@@ -13,3 +13,5 @@
 
 7. this projects more and more view details page added .
 and private route added .
+
+live link : https://candid-truffle-a6f421.netlify.app/addcraft

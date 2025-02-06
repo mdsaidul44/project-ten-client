@@ -31,7 +31,7 @@ const UpdateArt = () => {
 
 
         // send data to the server
-        fetch(`http://localhost:5000/art/${_id}`, {
+        fetch(`https://my-assignment-ten.onrender.com/art/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

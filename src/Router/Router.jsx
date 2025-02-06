@@ -26,7 +26,7 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home />,
-        loader: () => fetch('http://localhost:5000/art')
+        loader: () => fetch('https://my-assignment-ten.onrender.com/art')
       },
       {
         path: '/register',
@@ -43,7 +43,7 @@ const router = createBrowserRouter([
       {
         path: '/details/:id',
         element: <ViewDetails></ViewDetails>,
-        loader: () => fetch('http://localhost:5000/art')
+        loader: () => fetch('https://my-assignment-ten.onrender.com/art')
       },
       {
         path: '/allart',
@@ -52,27 +52,27 @@ const router = createBrowserRouter([
       {
         path: '/artdetails/:id',
         element: <PrivateRoute><AllCraftDetails /></PrivateRoute>,
-        loader: () => fetch(`http://localhost:5000/art`)
+        loader: () => fetch(`https://my-assignment-ten.onrender.com/art`)
       },
       {
         path:'/craft',
         element: <ArtSection/>,
-        loader: () =>fetch('http://localhost:5000/craft')
+        loader: () =>fetch('https://my-assignment-ten.onrender.com/craft')
       },
       {
         path: '/craftdetails/:id',
         element: <ArtDetails/>,
-        loader: () => fetch(`http://localhost:5000/craft`)
+        loader: () => fetch(`https://my-assignment-ten.onrender.com/craft`)
       },
       {
         path: '/myart',
         element: <PrivateRoute><MyArt></MyArt></PrivateRoute>,
-        loader: ()=> fetch('http://localhost:5000/art')
+        loader: ()=> fetch('https://my-assignment-ten.onrender.com/art')
       },
       {
         path: '/update/:id',
         element: <UpdateArt/> ,
-        loader: ()=>fetch(`http://localhost:5000/art`)
+        loader: ()=>fetch(`https://my-assignment-ten.onrender.com/art`)
       }
     ]
   },

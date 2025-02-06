@@ -7,7 +7,7 @@ const AllArtAndCraft = () => {
     const [allCraft, setAllCraft] = useState([])
   
     useEffect(() => {
-        fetch('http://localhost:5000/art')
+        fetch('https://my-assignment-ten.onrender.com/art')
             .then(res => res.json())
             .then(data => {
                 setAllCraft(data)
